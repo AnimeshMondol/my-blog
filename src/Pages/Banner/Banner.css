@@ -1,0 +1,13 @@
+.size{
+    height: 100%;
+    object-fit: cover;
+}
+.size2{
+    width: 100%;
+    object-fit: cover;
+}
+.size3{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
