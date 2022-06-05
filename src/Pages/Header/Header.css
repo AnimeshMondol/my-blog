@@ -1,0 +1,17 @@
+.link-style{
+    text-decoration: none;
+    color: #5451ff;
+    font-size: 30px;
+}
+.link-style:hover{
+    color: white;
+}
+.navbar-bg-color{
+    background-color: rgb(196, 164, 227);
+}
+.text-decor{
+    font-size: 15px;
+    margin-left: 10px;
+    color: #5451ff;
+    
+}
