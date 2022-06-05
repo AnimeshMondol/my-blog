@@ -3,7 +3,7 @@ import './Banner.css'
 
 const Banner = () => {
     return (
-        <div className='container'>
+        <div className='container mt-5'>
             <div class="swiffy-slider slider-nav-round slider-nav-animation slider-nav-animation-fadein slider-item-first-visible">
                 <ul class="slider-container">
                     <li class="slide-visible">

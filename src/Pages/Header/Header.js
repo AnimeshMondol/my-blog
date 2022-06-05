@@ -27,10 +27,10 @@ const Header = () => {
                                 <CustomLink to="/blogs">Blog</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <CustomLink to="#">About Us</CustomLink>
+                                <CustomLink to="/about">About Us</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <CustomLink to="#">Contact US</CustomLink>
+                                <CustomLink to="/contact">Contact US</CustomLink>
                             </li>
                             <li className="nav-item">
                                 <CustomLink to="/signup">Sign Up</CustomLink>
