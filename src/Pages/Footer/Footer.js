@@ -25,7 +25,7 @@ const Footer = () => {
                     <div className='col pe-3 pb-2'>
                         <div>
                             <img className='img-fluid mt-5 d-flex mx-auto' src={logo} alt="" />
-                            <p className='p-3 d-flex mx-auto text-dark'><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quaerat deleniti minus ullam quidem soluta non? Quam!</small></p>
+                            <p className='p-3 d-flex mx-auto text-dark'><small className='d-flex mx-auto'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quaerat deleniti minus ullam quidem soluta non? Quam!</small></p>
                             <h6 className='text-center text-danger'>Our Social Links</h6>
                             <div className='d-flex justify-content-center'>
                                 <button className='btn btn-link fs-1'><FcGoogle></FcGoogle></button>

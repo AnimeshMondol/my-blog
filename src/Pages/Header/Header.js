@@ -30,7 +30,7 @@ const Header = () => {
                                 <CustomLink to="/about">About Us</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <CustomLink to="/contact">Contact US</CustomLink>
+                                <CustomLink to="/contact">Contact Us</CustomLink>
                             </li>
                             <li className="nav-item">
                                 <CustomLink to="/signup">Sign Up</CustomLink>
