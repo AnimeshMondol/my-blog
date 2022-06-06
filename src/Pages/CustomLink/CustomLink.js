@@ -9,7 +9,7 @@ const CustomLink = ({ children, to, ...props }) => {
     return (
         <div>
             <Link className='navbar-link-style'
-                style={{ color: match ? "#5451ff" : "white", textDecoration: match ? "underline" : "none" }}
+                style={{ color: match ? "#DC3545" : "white", textDecoration: match ? "underline" : "none" }}
                 to={to}
                 {...props}
             >
