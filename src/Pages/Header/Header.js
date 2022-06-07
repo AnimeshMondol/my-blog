@@ -46,7 +46,7 @@ const Header = () => {
                                 user ?
                                     <div className='d-flex flex-column flex-sm-column flex-lg-row'>
                                         <li className="nav-item">
-                                            <CustomLink to="/add-items">Add Blogs</CustomLink>
+                                            <CustomLink to="/add-blog">Add Blog</CustomLink>
                                         </li>
                                         <li className="nav-item nav-item text-light fw-bold ms-5">
                                             Hello <span className='text-decor'> {user.displayName}</span>

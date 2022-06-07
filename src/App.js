@@ -2,6 +2,7 @@ import './App.css';
 import Header from './Pages/Header/Header';
 import Footer from './Pages/Footer/Footer';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Blogs from './Pages/Blogs/Blogs';
