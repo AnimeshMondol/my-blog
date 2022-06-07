@@ -14,7 +14,7 @@ const AddBlog = () => {
 
     const onSubmit = (data) => {
 
-        const url = `http://localhost:5000/blog`;
+        const url = `https://agile-reef-27808.herokuapp.com/blog`;
         fetch(url, {
             method: 'POST',
             headers: {

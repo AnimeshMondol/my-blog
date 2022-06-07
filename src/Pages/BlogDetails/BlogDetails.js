@@ -16,7 +16,7 @@ const BlogDetails = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/blog/${blogId}`)
+        fetch(`https://agile-reef-27808.herokuapp.com/blog/${blogId}`)
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])
@@ -26,7 +26,7 @@ const BlogDetails = () => {
         let like = remainingLike;
 
         if (like > -1) {
-            fetch(`http://localhost:5000/bloglike/${blogId}`, {
+            fetch(`https://agile-reef-27808.herokuapp.com/bloglike/${blogId}`, {
                 method: 'PUT',
                 headers: {
                     "content-type": "application/json",
@@ -48,7 +48,7 @@ const BlogDetails = () => {
 
         if (dislike > -1) {
 
-            fetch(`http://localhost:5000/blogdislike/${blogId}`, {
+            fetch(`https://agile-reef-27808.herokuapp.com/blogdislike/${blogId}`, {
                 method: 'PUT',
                 headers: {
                     "content-type": "application/json",
@@ -72,8 +72,8 @@ const BlogDetails = () => {
                     <div className='d-flex justify-content-between align-items-center'>
                         <h6 className='fw-bold fst-italic'><span className='text-danger'>Author: </span>{blogs.author}</h6>
                         <div>
-                            <button onClick={() => handelLike(blogId)} className='fw-bold my-4 btn btn-light border border-2 ms-3 me-3'><AiOutlineLike></AiOutlineLike>  {blogs.like}</button>
-                            <button onClick={() => handelDislike(blogId)} className='fw-bold my-4 btn btn-light border border-2 ms-3 me-3'><AiOutlineDislike></AiOutlineDislike>  {blogs.dislike}</button>
+                            <button onClick={() => handelLike(blogId)} className='fw-bold my-4 btn btn-light border border-2 ms-3 me-3 btn-outline-info'><AiOutlineLike></AiOutlineLike>  {blogs.like}</button>
+                            <button onClick={() => handelDislike(blogId)} className='fw-bold my-4 btn btn-light border border-2 ms-3 me-3 btn-outline-danger'><AiOutlineDislike></AiOutlineDislike>  {blogs.dislike}</button>
                         </div>
                     </div>
                     <hr />
