@@ -1,22 +1,30 @@
 import React from 'react';
-import './BlogsCart.css'
+import './BlogsCart.css';
+import {AiOutlineLike} from 'react-icons/ai';
+import {AiOutlineDislike} from 'react-icons/ai';
 
 const BlogsCart = ({ blog }) => {
-    const { _id, author, img, description, title, like, dislike, date_time, comments } = blog;
+    const { _id, author, img, description, title, like, dislike, date_time} = blog;
     return (
         <div className='col'>
             <div className='bg-color h-100 p-3 d-flex flex-column box-border'>
                 <img className='card-img-top img-fluid' src={img} alt="100*100" />
                 <div className='card-body'>
-                    <h2 className='text-center fw-bolder card-name'>{title}</h2>
+                    <h4 className='text-center fw-bolder card-name'>{title}</h4>
                     <hr />
-                    <h4 className='text-center fw-bold my-4 fs-4'><span className='text-danger'>Author: </span>{author}</h4>
-                    <h6 className='text-center my-4 fs-5'><span className='text-primary'>Detail: </span>{description.slice(0, 70)}...<span className='text-success'>See More in details</span></h6>
-                    <h6 className='text-center fw-bold my-4'><span className='text-primary'>Likes: </span>{like}</h6>
-                    <h6 className='text-center fw-bold my-4'><span className='text-primary'>Dislikes: </span>{dislike}</h6>
-                    <h6 className='text-center fw-bold my-4'><span className='text-primary'>Time: </span>{date_time}</h6>
-                    <h6 className='text-center fw-bold my-4'><span className='text-primary'>Comments: </span>{comments}</h6>
+                    <div className='d-flex justify-content-between align-items-center'>
+                    <h5 className='fw-bold'><span className='text-danger'>Author: </span>{author}</h5>
+                    <small>{date_time}</small>
+                    </div>
+                    <h6 className='text-center my-4 fs-5'><span className='text-primary'>Detail: </span><small>{description.slice(0, 70)}...</small><span className='text-success'>See More in details</span></h6>
+                    <div className='d-flex justify-content-between align-items-center'>
+                    <button className='fw-bold my-4 btn btn-light border border-2'><AiOutlineLike></AiOutlineLike> {like}</button>
+                    <button className='fw-bold my-4 btn btn-light border border-2'><AiOutlineDislike></AiOutlineDislike> {dislike}</button>
+                    </div>
                     <hr />
+                </div>
+                <div className='d-flex justify-content-center p-2'>
+                    <button className='btn btn-primary'>Click Here For Details!</button>
                 </div>
                 
             </div>
