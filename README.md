@@ -1,10 +1,28 @@
-# Getting Started with Create React App
+# My Blog (A small micro blogging platform where users can post and interact like [up vote, down vote, comment] with posts from other users.)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Site Link: [Click Here](https://my-blog-24fb8.web.app/).
 
-## Available Scripts
+## Used Components
+* React
+* HTML, CSS(Boostrap)
+* React Router Dom
+* React Hook Form
+* Firebase
+* React Firebase Hooks
+* React Icons
+* React Tostify
+* Social Login 
+* MongoDB
 
-In the project directory, you can run:
+## Server Github Link
+
+Server Github Repo. Link: [Click Here](https://github.com/AnimeshMondol/my-blogs-server).
+Server Link: [click Here](https://agile-reef-27808.herokuapp.com/).
+
+### How To run
+
+By soing into the side you need to create an account to see all the posts and to create a post in the website. So please create a account with a valid email address to see the posts and much more. 
+
 
 ### `npm start`
 
