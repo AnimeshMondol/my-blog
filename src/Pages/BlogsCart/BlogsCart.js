@@ -26,8 +26,8 @@ const BlogsCart = ({ blog }) => {
                     </div>
                     <h6 className='text-center my-4 fs-5'><span className='text-primary'>Detail: </span><small>{description.slice(0, 70)}...</small><span className='text-success'>See More in details</span></h6>
                     <div className='d-flex justify-content-between align-items-center'>
-                    <button className='fw-bold my-4 btn btn-light border border-2'><AiOutlineLike></AiOutlineLike> {like}</button>
-                    <button className='fw-bold my-4 btn btn-light border border-2'><AiOutlineDislike></AiOutlineDislike> {dislike}</button>
+                    <h6 className='fw-bold my-4'>Like:<AiOutlineLike></AiOutlineLike> {like}</h6>
+                    <h6 className='fw-bold my-4'>Dislike:<AiOutlineDislike></AiOutlineDislike> {dislike}</h6>
                     </div>
                     <hr />
                 </div>
