@@ -2,9 +2,17 @@ import React from 'react';
 import './BlogsCart.css';
 import {AiOutlineLike} from 'react-icons/ai';
 import {AiOutlineDislike} from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 
 const BlogsCart = ({ blog }) => {
     const { _id, author, img, description, title, like, dislike, date_time} = blog;
+
+    const navigate = useNavigate();
+
+    const navigateToDetail = id => {
+        navigate(`/blog/${id}`);
+    }
+
     return (
         <div className='col'>
             <div className='bg-color h-100 p-3 d-flex flex-column box-border'>
@@ -24,7 +32,7 @@ const BlogsCart = ({ blog }) => {
                     <hr />
                 </div>
                 <div className='d-flex justify-content-center p-2'>
-                    <button className='btn btn-primary'>Click Here For Details!</button>
+                    <button onClick={() => navigateToDetail(_id)} className='btn btn-primary'>Click Here For Details!</button>
                 </div>
                 
             </div>

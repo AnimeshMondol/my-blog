@@ -13,6 +13,7 @@ import Contact from './Pages/Contact/Contact';
 import About from './Pages/About/About';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import AddBlog from './Pages/AddBlog/AddBlog';
+import BlogDetails from './Pages/BlogDetails/BlogDetails';
 
 function App() {
   return (
@@ -26,7 +27,16 @@ function App() {
             <Blogs></Blogs>
           </RequireAuth>
         }></Route>
-        <Route path='/add-blog' element={<AddBlog></AddBlog>}></Route>
+        <Route path='/add-blog' element={
+          <RequireAuth>
+            <AddBlog></AddBlog>
+          </RequireAuth>
+        }></Route>
+        <Route path='/blog/:blogId' element={
+          <RequireAuth>
+            <BlogDetails></BlogDetails>
+          </RequireAuth>
+        }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
