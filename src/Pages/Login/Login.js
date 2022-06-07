@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import {GrLogin} from 'react-icons/gr'
 
 const Login = () => {
     const navigate = useNavigate();
@@ -64,7 +65,7 @@ const Login = () => {
                 <div className="col-lg-6 mb-5 mb-lg-0">
                     <div className="card cascading-right card-bg">
                         <div className="card-body p-5 shadow-5 text-center">
-                            <h2 className="fw-bold mb-5">Login Here !</h2>
+                            <h2 className="fw-bold mb-5">Login Here <GrLogin></GrLogin> !!</h2>
                             <form onSubmit={handleSubmit}>
                                 <div className="form-outline mb-4">
                                     <input ref={emailRef} type="email" id="form3Example3" className="form-control" required />
