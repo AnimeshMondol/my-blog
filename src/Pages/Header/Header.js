@@ -2,8 +2,18 @@ import React from 'react';
 import './Header.css';
 import CustomLink from '../CustomLink/CustomLink';
 import logo from '../../Images/logo.png';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
+
+    const [user] = useAuthState(auth);
+
+    const handleSignOut = () => {
+        signOut(auth);
+    }
+
     return (
         <div>
             <nav className="navbar fixed-top navbar-expand-lg navbar-dark navbar-bg-color">
@@ -32,12 +42,29 @@ const Header = () => {
                             <li className="nav-item">
                                 <CustomLink to="/contact">Contact Us</CustomLink>
                             </li>
-                            <li className="nav-item">
-                                <CustomLink to="/signup">Sign Up</CustomLink>
-                            </li>
-                            <li className="nav-item">
-                                <CustomLink to="/login">Login</CustomLink>
-                            </li>
+                            {
+                                user ?
+                                    <div className='d-flex flex-column flex-sm-column flex-lg-row'>
+                                        <li className="nav-item">
+                                            <CustomLink to="/add-items">Add Blogs</CustomLink>
+                                        </li>
+                                        <li className="nav-item nav-item text-light fw-bold ms-5">
+                                            Hello <span className='text-decor'> {user.displayName}</span>
+                                        </li>
+                                        <li className='nav-item text-light fw-bold ms-5' onClick={handleSignOut}>
+                                            Sign Out
+                                        </li>
+                                    </div>
+                                    :
+                                    <div className='d-flex flex-sm-column flex-lg-row'>
+                                        <li className="nav-item">
+                                            <CustomLink to="/signup">Sign Up</CustomLink>
+                                        </li>
+                                        <li className="nav-item">
+                                            <CustomLink to="/login">Login</CustomLink>
+                                        </li>
+                                    </div>
+                            }
                         </ul>
                     </div>
                 </div>
